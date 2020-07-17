@@ -1,0 +1,110 @@
+.contact {
+    color: $tan;
+    @include small-screen;
+    height: 100vh;
+    text-align: center;
+
+    @include lg {
+        @include large-screen;
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 15vmin;
+        margin-bottom: 7vmin;
+
+    }
+
+
+    &__container {
+
+
+        @media (max-width: 500px) {}
+    }
+
+    &__form {
+        text-align: center;
+
+    }
+
+    &__item {
+
+
+        margin: 0em 0 1.875em 0;
+        padding: 0 0 0.875em 0.75em;
+        text-transform: uppercase;
+        width: 100%;
+        box-sizing: border-box;
+        transition: all 0.3s;
+        background: none;
+        border: none;
+        border-bottom: solid 1px $tan;
+
+        input,
+        textarea {
+            background: none;
+            border: none;
+            width: 100%;
+            font-family: $ff-body;
+            letter-spacing: 3px;
+            color: $tan;
+
+
+            &:focus {
+                outline: none;
+                padding: 0 0 0 0.75em;
+                transition: ease-in 0.2s;
+
+            }
+        }
+
+        ::-webkit-input-placeholder {
+            color: $tan;
+            opacity: 1;
+            text-transform: uppercase;
+        }
+
+        :-moz-placeholder {
+            color: $tan;
+            opacity: 1;
+            text-transform: uppercase;
+        }
+
+        ::-moz-placeholder {
+            color: $tan;
+            opacity: 1;
+            text-transform: uppercase;
+        }
+
+        :-ms-input-placeholder {
+            color: $tan;
+            opacity: 1;
+            text-transform: uppercase;
+        }
+    }
+
+    &--name {
+        width: 100%;
+    }
+
+    &--phone {
+        width: 45%;
+        float: left;
+
+    }
+
+    &--email {
+        width: 45%;
+        float: right;
+    }
+
+    &__message {
+        float: none;
+        font-size: 1.3rem;
+
+    }
+
+}

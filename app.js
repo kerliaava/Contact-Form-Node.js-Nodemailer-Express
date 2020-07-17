@@ -1,7 +1,6 @@
 //1. we bring in the dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
-// const exphbs = require('express-handlebars'); //template eengine
 const path = require('path'); //to handle file path- built in module
 const nodemailer = require('nodemailer');
 
@@ -10,11 +9,6 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 
-//4. view engine setup
-//Handlebars is a simple templating language. It uses a template and an input object to generate HTML or other text formats.
-
-// app.engine('handlebars', exphbs());
-// app.set('view engine', 'handlebars');
 
 //6. use public folder - static folder
 
@@ -65,7 +59,7 @@ app.post('/mail', (req, res) => {
         // ,
         // tls: {
         //     rejectUnauthorized: false
-        // }
+        // } //for localhost
     });
 
     // setup email data with unicode symbols
