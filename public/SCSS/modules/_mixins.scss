@@ -1,0 +1,12 @@
+@mixin large-screen {
+    padding: 0 15vw;   
+}
+
+@mixin small-screen {
+    padding: 0 4vh;
+}
+
+@mixin medium-screen {
+    padding: 0 10vh;
+}
+

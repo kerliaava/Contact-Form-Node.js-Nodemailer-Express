@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 12px;
+
+}
+
+body {
+
+  background-color: $beige;
+  letter-spacing: 2px;
+  font-family: $ff-body;
+
+
+}
+
+main {
+  overflow: hidden;
+  background-color: $beige;
+}
+
+.content-fade {
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-delay: 1.2s;
+}
+
+
+
+
+
+p {
+  text-align: justify;
+  line-height: 1.7em;
+  font-size: 15px;
+  color: $tan;
+
+}
+
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+  color: $tan;
+
+
+  &:hover {
+    text-decoration-line: underline;
+  }
+
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 5px;
+  line-height: 1;
+  font-weight: lighter;
+  font-family: $ff-heading;
+}
+
+
+
+h4 {
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-family: $ff-body;
+  color: $tan;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+
+
+.section__number {
+  width: 100vw;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: $ff-heading;
+  margin: 5em 4em;
+
+
+  @media (min-width: 1100px) {
+    margin: 5em 10em;
+  }
+
+
+  h3 {
+    margin: 1.5em 0;
+    color: $tan;
+    font-weight: lighter;
+    font-size: 5vw;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      border-bottom: 1px solid $tan;
+      width: 4rem;
+      margin-bottom: 0.3em;
+      margin-right: 2em;
+
+    }
+  }
+}
+
+.section__heading h2 {
+  color: $tan;
+  letter-spacing: 3px;
+  font-family: $ff-heading;
+  font-size: 15vw;
+  margin-bottom: 15vmin;
+
+
+}
+
+.section__heading--left {
+  text-align: left;
+
+  @media (max-width: 769px) {
+    text-align: center;
+  }
+
+  @include lg {
+    margin-left: 15vw;
+  }
+}
+
+.section__heading--right {
+  text-align: right;
+
+  @media (max-width: 769px) {
+    text-align: center;
+  }
+
+  @include lg {
+    margin-right: 15vw;
+  }
+}
+
+
+
+.button {
+  width: 85vw;
+  background: rgba($tan, 0.2);
+  font-family: $ff-body;
+  letter-spacing: 3px;
+  border-style: none;
+  border-radius: 5px;
+  color: $tan;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: 1em;
+
+  @media (min-width: 768px) {
+    width: 200px;
+    margin-right: 2em;
+  }
+}
+
+
+@-webkit-keyframes smoothRight {
+
+  from {
+
+    transform: rotateX(-10deg);
+
+  }
+
+  to {
+
+    transform: rotateX(0);
+
+  }
+}
+
+@keyframes smoothRight {
+
+  from {
+
+
+    transform: translateX(120px);
+
+  }
+
+  to {
+
+    transform: translateX(0);
+
+  }
+}
+
+@keyframes smoothLeft {
+
+  from {
+
+    transform: translateX(-120px);
+
+  }
+
+  to {
+
+    transform: translateX(0);
+
+  }
+}
+
+@keyframes fade {
+
+  from {
+
+    opacity: 0;
+
+  }
+
+  to {
+
+    opacity: 1;
+
+  }
+}
